@@ -1,0 +1,7 @@
+{
+    "nodeMailer_email": "noreply@shikha.com",
+    "SMTP_HOST": "smtp.sendgrid.net",
+    "SMTP_PORT": 25,
+    "SMTP_USER": "Shikha99",
+    "SMTP_PASS": "Shikha@123"
+}

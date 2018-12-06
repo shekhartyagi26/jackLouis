@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<base href="/">
+
+<head>
+    <title>Jack Louis</title>
+
+    <head>
+        <base href="/">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <!-- css file -->
+        <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+        <link rel="stylesheet" type="text/css" href="assests/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="assests/css/animate.css">
+        <link rel="stylesheet" type="text/css" href="assests/css/style.css">
+
+        <!-- Angular file -->
+        <!-- Angular file -->
+        <script src="assests/js/angular.js"></script>
+        <script src="assests/js/angular-animate.js"></script>
+        <script src="assests/js/angular-route.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+        </script>
+        <script src="app/services/userServices.js"></script>
+        <script src="app/services/authServices.js"></script>
+        <!-- angular config/routes -->
+        <script src="app/app.js"></script>
+        <script src="app/routes.js"></script>
+        <!-- angular controller -->
+        <script src="app/controllers/userCtrl.js"></script>
+        <script src="app/controllers/blogCtrl.js"></script>
+        <script src="app/controllers/homeCtrl.js"></script>
+            <script src="app/controllers/productCtrl.js"></script>
+        <script>
+            addEventListener("load", function () {
+                setTimeout(hideURLbar, 0);
+            }, false);
+
+            function hideURLbar() {
+                window.scrollTo(0, 1);
+            }
+        </script>
+
+
+        <script src="app/app.js"></script>
+        <script src="app/routes.js"></script>
+        <link href="assests/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+        <!-- shop css -->
+        <link href="assests/css/shop.css" type="text/css" rel="stylesheet" media="all">
+        <link rel="stylesheet" href="assests/css/owl.carousel.min.css">
+        <!-- Owl-Carousel-CSS -->
+        <link href="assests/css/style.css" type="text/css" rel="stylesheet" media="all">
+        <!-- font-awesome icons -->
+        <link href="assests/css/fontawesome-all.min.css" rel="stylesheet">
+        <!-- //Custom Theme files -->
+        <!-- online-fonts -->
+        <link href="//fonts.googleapis.com/css?family=Elsie+Swash+Caps:400,900" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i"
+            rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous">
+        <!-- //online-fonts -->
+    </head>
+
+<body ng-app="userApp" ng-cloak>
+    <style type="text/css">
+        marquee span {
+            margin-right: 100%;
+        }
+
+        marquee p {
+            white-space: nowrap;
+            margin-right: 100%;
+        }
+
+        .productbox {
+            width: 450px;
+            height: auto;
+            background-color: #ffffff;
+            padding: 10px;
+            margin-bottom: 10px;
+            padding: 10px;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+            background-color: #fff;
+            border: solid 3px red;
+            transition: all .20s ease-in-out;
+        }
+
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+    <!-- header -->
+    <header>
+        <div class="">
+            <!-- top nav -->
+            <nav class="top_nav d-flex pt-3 pb-1">
+                <!-- logo -->
+                <h1>
+                    <a class="navbar-brand" href="index.html">
+                        <image src="assests/images/JACK LOUIS LOGO.png" style="width: 100px; height: auto;padding-left: 40px;">
+                    </a>
+                </h1>
+
+
+            </nav>
+            <!-- //top nav -->
+            <!-- bottom nav -->
+            <nav class="navbar navbar-expand-lg navbar-light justify-content-center" style="background-color:#EC1515">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent" style="background-color:#EC1515,color:#fff">
+                    <ul class="navbar-nav mx-auto text-center">
+                        <li class="nav-item">
+                            <!--   <a class="nav-link  active" href="/" style="color:#fff">Home
+                                <span class="sr-only">(current)</span>
+                            </a> -->
+                        <li class="nav-item"><a class="nav-link" style="color:#fff" href="/">Home</a></li>
+                        </li>
+
+                        <li class="nav-item dropdown has-mega-menu" style="position:relative;justify-content: center;">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/men" role="button"
+                                aria-haspopup="true" aria-expanded="false" style="color:#fff">Men's clothing</a>
+                            <div class="dropdown-menu" style="width:30%">
+                                <div class="px-0 container">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <a class="dropdown-item" href="/top">Top Wear
+
+                                            </a>
+                                            <a class="dropdown-item" href="/mens">Bottom Wear
+                                            </a>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown has-mega-menu" style="position:relative;">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/women" role="button"
+                                aria-haspopup="true" aria-expanded="false" style="color:#fff">Women's clothing</a>
+                            <div class="dropdown-menu" style="width:30%">
+                                <div class="px-0 container">
+                                    <div class="row" style="align-content: center;">
+                                        <div class="col-md-4">
+
+                                            <a class="dropdown-item" href="/women">T-shirts</a>
+                                            <a class="dropdown-item" href="/women">Joggers</a>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about" style="color:#fff">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/blog" style="color:#fff">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contact" style="color:#fff">Contact</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+            <!-- //bottom nav -->
+        </div>
+        <!-- //header container -->
+    </header>
+    <!-- //header -->
+    <!-- banner -->
+    <div class="ibanner_w3 pt-sm-5 pt-3">
+        <h4 class="head_agileinfo text-center text-capitalize text-center pt-5">
+            <img src="assests/images/FINAL JACK LOGO white.png" alt="img" style="width: 200; height: 200;">
+
+    </div>
+
+    <div ng-view></div>
+
+    <div class="container-fluid">
+        <marquee scrollamount="10">
+
+            <div class="row">
+                <div class="col-sm-1 col-md-1 productbox" style="">
+                    <img src="assests/images/Jack LOUIS LOGO.png" style="height: 70px; width: auto; " align="middle">
+                </div>
+                <div class="col-sm-1 col-md-1 productbox" style="margin-left: 20px;">
+                    <img src="assests/images/fitful logo.jpg" style="height: 70px; width: 80px;  " align="middle">
+                </div>
+
+
+                <div class="col-sm-2 col-md-2 productbox" style="margin-left: 20px;">
+                    <span style="font-weight: bold; text-align: center;">
+                        <h5>Jack Louis<br> Performance</h5>
+                    </span>
+                </div>
+                <div class="col-sm-2 col-md-1 productbox" style="margin-left: 20px;">
+                    <span style="font-weight: bold; text-align: center;">
+                        <h5>Jack Louis <br> Active</h5>
+                    </span>
+                </div>
+                <div class="col-sm-1 col-md-1 productbox" style="margin-left: 20px;">
+                    <span style="font-weight: bold; text-align: center;">
+                        <h5>Jack Louis<br> Athliesure</h5>
+                    </span>
+                </div>
+                <div class="col-sm-1 col-md-1 productbox" style="margin-left: 20px;">
+                    <span style="font-weight: bold; text-align: center;">
+                        <h5> Jack Louis <br> Comfies</h5>
+                    </span>
+                </div>
+                <div class="col-sm-1 col-md-1 productbox" style="margin-left: 20px;">
+                    <span style="font-weight: bold; text-align: center;">
+                        <h5> Jack Louis<br> Lil Champs</h5>
+                    </span>
+                </div>
+                <div class="col-sm-1 col-md-1 productbox" style="margin-left: 20px;">
+                    <span style="font-weight: bold; text-align: center;">
+                        <h5> Jack Louis <br>Kiddos™</h5>
+                    </span>
+                </div>
+                <div class="col-sm-1 col-md-1 productbox" style="margin-left: 20px;">
+                    <span style="font-weight: bold; text-align: center;">
+                        <h5> Jack Louis <br>for Her™</h5>
+                    </span>
+                </div>
+            </div>
+        </marquee>
+
+
+
+    </div>
+    <footer class="footer widget-footer" style="color: #ffffff; background-color: #EC1515">
+        <div class="container" style="margin-top:-30px;margin-bottom:-30px;background-color: #EC1515">
+            <div class="row">
+                <div class="col-lg-6 col-sm-6 reponsive-mb30">
+                    <div class="widget-logo">
+                        <div id="logo-footer" class="logo">
+                            <a href="index.html" rel="home">
+                                <img src="assests/images/FINAL JACK LOGO white.png" alt="img" style="width: 60; height: auto;">
+                            </a>
+                        </div>
+
+
+                    </div>
+
+                    <ul class="mt-4">
+                        <li class="list-inline-item">
+                            <a href="/" style="color: #fff;"> Home</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="/about" style="color: #fff;"> About</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="/men" style="color: #fff;"> Men's Clothing</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="/women" style="color: #fff;"> Women's Clothing</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="/men" style="color: #fff;"> Blog</a>
+                        </li>
+                        <li class="list-inline-item ">
+                            <a href="/contact" style="color: #fff;"> Contact </a>
+                        </li>
+                    </ul>
+                </div><!-- /.col-md-3 -->
+
+                <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6">
+                    <ul class="flat-information">
+                        <li>
+                            <div class="row">
+                                <div class="col-sm-4 col-lg-4 col-md-4"></div>
+                                <div class="col-sm-1 col-lg-1 col-md-1">
+                                    <i class="fa fa-map-marker" style="color: #fff"></i>
+                                </div>
+                                <div class="col-sm-7 col-lg-7 col-md-7 text-justify" style="margin-left: -10px;">401
+                                    Mohit Highland<br> Off Salunkhe Vihar Road<br> Wanowarie Pune,Maharashtra</a></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="row">
+                                <div class="col-sm-4 col-lg-4 col-md-4"></div>
+                                <div class="col-sm-1 col-lg-1 col-md-1">
+                                    <i class="fa fa-phone" style="color: #fff"></i></div>
+                                <div class="col-sm-7 col-lg-7 col-md-7 text-justify" style="margin-left: -10px;">+91 20
+                                    412 08566</a></div>
+                            </div>
+                        </li>
+                        <li style="color: #fff">
+                            <div class="row">
+                                <div class="col-sm-4 col-lg-4 col-md-4"></div>
+                                <div class="col-sm-1 col-lg-1 col-md-1">
+                                    <i class="fa fa-envelope" style="color: #fff"></i> </div>
+                                <div class="col-sm-7 col-lg-7 col-md-7 text-justify" style="margin-left: -10px;">info@admconsultants.in</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div><!-- /.col-md-3 -->
+
+
+                <div style="color: #fff" class="text-center col-sm-12 col-lg-12 col-md-12 col-xs-12">© 2018 Jack Louis.
+                    All rights reserved </div>
+
+
+
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </footer>
+
+    <!-- //signup modal -->
+    <!-- signin Modal -->
+
+
+    <script type="text/javascript" src="assests/js/jquery-3.3.1.js"></script>
+    <script src="assests/js/jquery-2.2.3.min.js"></script>
+
+    <script src="assests/js/responsiveslides.min.js"></script>
+
+    <script>
+
+    </script>
+
+    <script src="assests/js/owl.carousel.js"></script>
+    <script>
+        var owl = $('.owl-carousel');
+        owl.owlCarousel({
+            items: 4,
+            loop: false,
+            margin: 10,
+            autoplay: false,
+            autoplayTimeout: 5000,
+            autoplayHoverPause: false,
+            responsive: {
+                320: {
+                    items: 1,
+                },
+                568: {
+                    items: 2,
+                },
+                991: {
+                    items: 3,
+                },
+                1050: {
+                    items: 4
+                }
+            }
+        });
+    </script>
+    <script>
+
+    </script>
+    <script src="assests/js/SmoothScroll.min.js"></script>
+
+    <script src="assests/js/bootstrap.js"></script>
+    <!--    <script type="text/javascript" src="assests/js/jquery-3.3.1.js"></script>
+
+ -->
+    <script type="text/javascript" src="assests/js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="assests/js/bootstrap.js"></script>
+</body>
+
+</html>

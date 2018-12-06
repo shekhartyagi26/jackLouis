@@ -1,0 +1,190 @@
+<!-- //inner banner -->
+<!-- //inner banner -->
+<!-- breadcrumbs -->
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="index.html">Home</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">About</li>
+    </ol>
+</nav>
+<div class="container">
+    <div class="row" style="margin-bottom: 20px;">
+        <div class="col-md-6 col-sm-12 col-lg-6">
+            <p style="text-align: justify;">SVP Apparels Pvt Ltd., based in Pune, Maharashtra is the registered owner,
+                exclusive manufacturer and marketer of the brands ‘Jack Louis ™ & Fitful ®. The company exclusively
+                manufactures and markets brands like Jack Louis™, Jack Louis Kiddos™, Jack Louis for Her™, Fitful®.
+                <br>
+                The company was set up in September 2017 with a vision to create strong apparel brand with innovative
+                products for Men, Women and Kids. With intent to create innovative products at most affordable prices,
+                the company has been striving to create a niche in Comfort Wear and Active Wear Apparels.
+                <br>
+                The company has its Corporate Office at Pune, Maharashtra with manufacturing and warehousing facility
+                at Navsari, Gujarat. Company’s management & Board of Directors consists professionals from various
+                educational background and have vast experience working in various Multinational Companies in different
+                industries.
+                <br>
+                Since its inception in September 2017, company has created its distribution network in various states
+                in India such as Maharashtra, Andhra Pradesh, Telangana& Karnataka. The company has planned to expand
+                its distribution network in the states of Gujarat, Madhya Pradesh, & Chattisgarh.
+            </p>
+        </div>
+        <div class="col-md-6 col-sm-12 col-lg-6">
+            <div class="row">
+                <img src="assests/images/FINAL JACK LOGO.png" alt="img" style="width: auto; height: 60px; margin-right: 20px; margin-left: 50px;">
+                <img src="assests/images/fitful logo.jpg" alt="img" style="width: auto; height: 60px;">
+            </div>
+            <div class="row">
+
+                <img src="assests/images/FCC001.png" alt="img" style="width: auto; height: 200px;">
+                <img src="assests/images/JCT004.jpg" alt="img" style="width: auto; height: 200px;">
+                <img src="assests/images/FCS001.png" alt="img" style="width: auto; height: 200px;">
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- signin Modal -->
+<!-- js -->
+<script src="js/jquery-2.2.3.min.js"></script>
+<!-- //js -->
+<!-- smooth dropdown -->
+<script>
+    $(document).ready(function () {
+        $('ul li.dropdown').hover(function () {
+            $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(200);
+        }, function () {
+            $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(200);
+        });
+    });
+</script>
+<!-- //smooth dropdown -->
+<!-- script for password match -->
+<script>
+    window.onload = function () {
+        document.getElementById("password1").onchange = validatePassword;
+        document.getElementById("password2").onchange = validatePassword;
+    }
+
+    function validatePassword() {
+        var pass2 = document.getElementById("password2").value;
+        var pass1 = document.getElementById("password1").value;
+        if (pass1 != pass2)
+            document.getElementById("password2").setCustomValidity("Passwords Don't Match");
+        else
+            document.getElementById("password2").setCustomValidity('');
+        //empty string means no validation error
+    }
+</script>
+<!-- script for password match -->
+<!-- Banner Responsiveslides -->
+<script src="js/responsiveslides.min.js"></script>
+<script>
+    // You can also use "$(window).load(function() {"
+    $(function () {
+        // Slideshow 4
+        $("#slider3").responsiveSlides({
+            auto: true,
+            pager: true,
+            nav: false,
+            speed: 500,
+            namespace: "callbacks",
+            before: function () {
+                $('.events').append("<li>before event fired.</li>");
+            },
+            after: function () {
+                $('.events').append("<li>after event fired.</li>");
+            }
+        });
+
+    });
+</script>
+<!-- // Banner Responsiveslides -->
+<!-- Product slider Owl-Carousel-JavaScript -->
+<script src="js/owl.carousel.js"></script>
+<script>
+    var owl = $('.owl-carousel');
+    owl.owlCarousel({
+        items: 4,
+        loop: false,
+        margin: 10,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: false,
+        responsive: {
+            320: {
+                items: 1,
+            },
+            568: {
+                items: 2,
+            },
+            991: {
+                items: 3,
+            },
+            1050: {
+                items: 4
+            }
+        }
+    });
+</script>
+<!-- //Product slider Owl-Carousel-JavaScript -->
+<!-- cart-js -->
+<script src="js/minicart.js">
+</script>
+<script>
+    hub.render();
+
+    hub.cart.on('new_checkout', function (evt) {
+        var items, len, i;
+
+        if (this.subtotal() > 0) {
+            items = this.items();
+
+            for (i = 0, len = items.length; i < len; i++) { }
+        }
+    });
+</script>
+<!-- //cart-js -->
+<!-- start-smooth-scrolling -->
+<script src="js/move-top.js"></script>
+<script src="js/easing.js"></script>
+<script>
+    jQuery(document).ready(function ($) {
+        $(".scroll").click(function (event) {
+            event.preventDefault();
+
+            $('html,body').animate({
+                scrollTop: $(this.hash).offset().top
+            }, 1000);
+        });
+    });
+</script>
+<!-- //end-smooth-scrolling -->
+<!-- smooth-scrolling-of-move-up -->
+<script>
+    $(document).ready(function () {
+        /*
+        var defaults = {
+            containerID: 'toTop', // fading element id
+            containerHoverID: 'toTopHover', // fading element hover id
+            scrollSpeed: 1200,
+            easingType: 'linear' 
+        };
+        */
+
+        $().UItoTop({
+            easingType: 'easeOutQuart'
+        });
+
+    });
+</script>
+<script src="js/SmoothScroll.min.js"></script>
+<!-- //smooth-scrolling-of-move-up -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/bootstrap.js"></script>
+</body>
+
+</html>
