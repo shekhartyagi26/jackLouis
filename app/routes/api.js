@@ -6,6 +6,7 @@ const multer = require("multer");
 const { STORAGE, DEFAULT_FILE_ARRAY } = require("../module/image");
 const { validate, parameterMissing, successResult, serverError } = require('../module/generic')
 const _ = require("lodash");
+const mongoose = require('mongoose');
 
 var options = {
     auth: {
@@ -85,24 +86,17 @@ module.exports = function (router) {
             .catch(err => res.status(500).json(serverError(err)))
     })
 
+    router.get('/products/:id', function (req, res) {
+        let { id } = req.params; // known as object destructring
+        if (mongoose.Types.ObjectId.isValid(id)) {
+            productModel.findOne({ _id: id })
+                .then(product => res.status(200).json(successResult(product)))
+                .catch(err => res.status(500).json(serverError(err)))
+        } else {
+            res.status(400).json(parameterMissing("Invalid id"))
+        }
 
-
-  router.get('/products/:id', function (req, res) {
-        let id = req.params.id;
-        productModel.find()
-            .then(product => res.status(200).json(successResult(product)))
-            .catch(err => res.status(500).json(serverError(err)))
     })
-
-
-
-
- // router.get('/product/:id', function (req, res) {
- //        let id = req.params.id;
- //        productModel.findById(id, function (err, productModel){
- //      res.json(productModel);
- //  });
- //    })
 
     return router;
 };
