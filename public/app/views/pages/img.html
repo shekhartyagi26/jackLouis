@@ -1,0 +1,570 @@
+    <section class="tabs_pro " style="bottom-margin:-40px">
+        <h5 class="head_agileinfo text-center text-capitalize pb-5">
+            <span>s</span>mart clothing</h5>
+        <div class="tabs tabs-style-line pt-md-5" style="margin-top:-60px;">
+            <nav class="container">
+                <ul id="clothing-nav" class="nav nav-tabs tabs-style-line" role="tablist">
+                    <li class="nav-item" >
+                        <a class="nav-link active" href="#activewear" id="women-tab" role="tab" data-toggle="tab" aria-controls="women" aria-expanded="true">Active Wear</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#comfortwear" role="tab" id="men-tab" data-toggle="tab" aria-controls="men">Comfort Wear
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <!-- <a class="nav-link" href="#girl" role="tab" id="girl-tab" data-toggle="tab" aria-controls="girl">Girl's Fashion</a> -->
+                    </li>
+                    <li class="nav-item">
+                       <!--  <a class="nav-link" href="#boy" role="tab" id="boy-tab" data-toggle="tab" aria-controls="boy">Boy's Fashion</a> -->
+                    </li>
+                </ul>
+            </nav>
+            <!-- Content Panel -->
+            <div id="clothing-nav-content" class="tab-content py-sm-5 "style="margin-bottom:-26px;">
+                <div role="tabpanel"   class="tab-pane fade show active container" id="activewear" aria-labelledby="women-tab">
+                    <div class="col-md-12 text-center"  >
+                        <div class="row">
+                            <!-- card -->
+                            <div class="card col-lg-3 col-md-3 col-sm-3 col-xs-6 product-men p-3"  ng-repeat="product in home.productList"  >
+                                <div class="men-thumb-item" >
+                                    <!-- <img src="http://localhost:3002/{{product.image[0].image_url}}" alt="img" class="" style="height: 258px;width:auto;"> -->
+                                    <div class="men-cart-pro">
+                                        <div class="inner-men-cart-pro">
+                                           <!--  <a class="nav-link active" href="#FCT001" id="FCT001-tab" role="tab" data-toggle="tab" aria-controls="FCT001" aria-expanded="true">>Quick View123</a> -->
+                                          <!--   <a href="/track" class="link-product-add-cart">Quick View123</a> -->
+                                          <!-- <a href="/home/{{ product._id }}">
+                    <button type="button" class="btn btn-primary">Edit</button>
+                </a> -->
+                                          <div class="inner-men-cart-pro">
+                                            <a href="/products/{{ product._id }}" class="link-product-add-cart">Quick View</a>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- card body -->
+                                <div class="card-body  py-3 px-2">
+                                    <h5 class="card-title text-capitalize">{{product.description}}</h5></div>
+                            </div>
+                            <!-- //card -->
+                        </div>
+                        <div class="item  col-lg-3 col-md-3 col-sm-6 col-xs-6" >
+                           
+                            <div class="card product-men p-3" >
+                                <div class="men-thumb-item" >
+                                    <img src="http://localhost:3002/{{product.image[1].image_url}}" class="" style="height: 258px;width:auto;" alt="img">
+                                    <div class="men-cart-pro">
+                                        <div class="inner-men-cart-pro">
+                                            <a href="womens.html" class="link-product-add-cart">Quick View</a>
+                                        </div>
+                                    </div>
+                                </div>
+                              
+                                <div class="card-body  py-3 px-2">
+                                    <h5 class="card-title text-capitalize">{{product.description}}</h5>
+                                   
+                                </div>
+                                
+                            </div>
+                          
+                        </div>
+                        <div class="item col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                          
+                            <div class="card product-men p-3">
+                                <div class="men-thumb-item" >
+                                    <img src="http://localhost:3002/{{product.image[2].image_url}}" alt="img" style="height: 258px;width:auto;" >
+                                    <div class="men-cart-pro">
+                                        <div class="inner-men-cart-pro">
+                                            <a href="/tack" class="link-product-add-cart">Quick View</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="card-body  py-3 px-2">
+                                    <h5 class="card-title text-capitalize">{{product.description}}</h5>
+                                    
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+
+                        <div class="item col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                          
+                            <div class="card product-men p-3">
+                                <div class="men-thumb-item" >
+                                    <img src="assests/images/pf9.jpg" style="height: 258px;width:auto;" alt="img" >
+                                    <div class="men-cart-pro">
+                                        <div class="inner-men-cart-pro">
+                                            <a href="womens.html" class="link-product-add-cart">Quick View</a>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                                <div class="card-body  py-3 px-2">
+                                    <h5 class="card-title text-capitalize">{{product.name}}</h5>
+                                   
+                                </div>
+                               
+                            </div>
+                          
+                        </div>
+               
+                        
+                    </div>
+                </div>
+
+                <div role="tabpanel" class="tab-pane fade" id="comfortwear" aria-labelledby="men-tab" style="margin-top: -26px;">
+                    <div class="row text-center">
+                        <div class="item col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                            <!-- card -->
+                            <div class="card product-men p-3">
+                               
+                                <div class="men-thumb-item" >
+                                    <img src="assests/images/pm1.jpg" alt="img" style="height: 258px;width:auto;">
+                                    <div class="men-cart-pro">
+                                        <div class="inner-men-cart-pro">
+                                            <a href="womens.html" class="link-product-add-cart">Quick View</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- card body -->
+                                <div class="card-body  py-3 px-2">
+                                    <h5 class="card-title text-capitalize">Shorts with sporty cross side </h5>
+                                    
+                                </div>
+                               
+                            </div>
+                            <!-- //card -->
+                        </div>
+                        <div class="item col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                            <!-- card -->
+                            <div class="card product-men p-3">
+                                <div class="men-thumb-item">
+                                    <img src="assests/images/pm2.jpg" alt="img" class="card-img-top" style="height: 258px;width:auto;">
+                                    <div class="men-cart-pro">
+                                        <div class="inner-men-cart-pro">
+                                            <a href="mens.html" class="link-product-add-cart">Quick View</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- card body -->
+                                <div class="card-body  py-3 px-2">
+                                    <h5 class="card-title text-capitalize">Single thin stripe capri</h5>
+                                
+                                </div>
+                                
+                            </div>
+                            <!-- //card -->
+                        </div>
+                        <!-- card -->
+                        <div class="item col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                            <div class="card product-men p-3">
+                                <div class="men-thumb-item">
+                                    <img src="assests/images/grn.jpg" alt="img" class="card-img-top" style="height: 258px;width:auto;">
+                                    <div class="men-cart-pro">
+                                        <div class="inner-men-cart-pro">
+                                            <a href="mens.html" class="link-product-add-cart">Quick View</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- card body -->
+                                <div class="card-body  py-3 px-2">
+                                    <h5 class="card-title text-capitalize">Rib capri pant with thin stripe</h5>
+                                    
+                                </div>
+                             
+                            </div>
+                            <!-- //card -->
+                        </div>
+                   
+                        <div class="item col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                            <!-- card -->
+                            <div class="card product-men p-3">
+                                <div class="men-thumb-item">
+                                    <img src="assests/images/pt2.jpg" style="height: 258px;width:auto;" alt="img" class="card-img-top">
+                                    <div class="men-cart-pro">
+                                        <div class="inner-men-cart-pro">
+                                            <a href="mens.html" class="link-product-add-cart">Quick View</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- card body -->
+                                <div class="card-body  py-3 px-2">
+                                    <h5 class="card-title text-capitalize"> Shorts with thin stripe</h5>
+                                    
+                                </div>
+                              
+                            </div>
+                            <!-- //card -->
+                        </div>
+                       
+                            <!-- //card -->
+                        </div>
+                       
+                    </div>
+                </div>
+
+    
+
+            </div>
+        </div>
+    </section>
+    <!-- //product tabs -->
+    <section class="" style="top-margin:-50px">
+        <h5 class="head_agileinfo text-center text-capitalize pb-5">
+            <span>Top</span>Selling</h5>
+        <div class="tabs tabs-style-line pt-md-5" style="margin-top:-60px;">
+            <nav class="container">
+                <ul id="clothing-nav" class="nav nav-tabs tabs-style-line" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#Track" id="Track-tab" role="tab" data-toggle="tab" aria-controls="Track" aria-expanded="true">Track</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Capri" role="tab" id="Capri-tab" data-toggle="tab" aria-controls="Capri">Capri
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Shorts" role="tab" id="Shorts-tab" data-toggle="tab" aria-controls="girl">Shorts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#T-Shirt" role="tab" id="T-Shirt-tab" data-toggle="tab" aria-controls="T-Shirt">T-Shirt's</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- Content Panel -->
+            <div id="clothing-nav-content" class="tab-content py-sm-5" style="margin-top:-15px;">
+                <div role="tabpanel" class="tab-pane fade show active" id="Track" aria-labelledby="Track-tab">
+                    <div class="row text-center" >
+                        <div class="item col-md-3">
+                            <!-- card -->
+                            <div class="card product-men p-3">
+                                <div class="men-thumb-item">
+                                    <img src="assests/images/pt1.jpg" alt="img" style="height: 258px;width:auto;">
+                                    <div class="men-cart-pro">
+                                        <div class="inner-men-cart-pro">
+                                            <a href="womens.html" class="link-product-add-cart">Quick View</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- card body -->
+                                <div class="card-body  py-3 px-2">
+                                    <h5 class="card-title text-capitalize">Jogger with side sripe</h5>
+                                   
+                                </div>
+                               
+                            </div>
+                            <!-- //card -->
+                        </div>
+                        <div class="item col-md-3">
+                            <!-- card -->
+                            <div class="card product-men p-3">
+                                <div class="men-thumb-item" >
+                                    <img src="assests/images/JCT001.jpg.png" alt="img" style="height: 258px;width:auto;margin-left: -5px;">
+                                    <div class="men-cart-pro">
+                                        <div class="inner-men-cart-pro">
+                                            <a href="womens.html" class="link-product-add-cart">Quick View</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- card body -->
+                                <div class="card-body  py-3 px-2">
+                                    <h5 class="card-title text-capitalize">Track Pant with side stripes</h5>
+                                    
+                                </div>
+                              
+                            </div>
+                            <!-- //card -->
+                        </div>
+                        <div class="item col-md-3">
+                            <!-- card -->
+                            <div class="card product-men p-3">
+                                <div class="men-thumb-item" >
+                                    <img src="assests/images/JCT004.jpg" alt="img" style="height: 258px;width:auto;">
+                                    <div class="men-cart-pro">
+                                        <div class="inner-men-cart-pro">
+                                            <a href="womens.html" class="link-product-add-cart">Quick View</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- card body -->
+                                <div class="card-body  py-3 px-2">
+                                    <h5 class="card-title text-capitalize">Cool and Casual Jogger</h5>
+                                    
+                                </div>
+                                
+                            </div>
+                            <!-- //card -->
+                        </div>
+
+                        <div class="ite col-md-3">
+                            <!-- card -->
+                            <div class="card product-men p-3">
+                                <div class="men-thumb-item" >
+                                    <img src="assests/images/JCT005.jpg" alt="img" style="height: 258px;width:auto;">
+                                    <div class="men-cart-pro">
+                                        <div class="inner-men-cart-pro">
+                                            <a href="womens.html" class="link-product-add-cart">Quick View</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- card body -->
+                                <div class="card-body  py-3 px-2">
+                                    <h5 class="card-title text-capitalize">Cool and Casual Jogger</h5>
+                                     
+                                </div>
+                               
+                            </div>
+                            <!-- //card -->
+                        </div>
+                       
+                      
+                    </div>
+                </div>
+
+                <div role="tabpanel" class="tab-pane fade" id="Capri" aria-labelledby="Capri-tab">
+                    <div class="row text-center" >
+                        <div class="item col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                            <!-- card -->
+                            <div class="card product-men p-3">
+                                <div class="men-thumb-item">
+                                    <img src="assests/images/FCC001.png" alt="img" class="" style="height: 258px;width:auto;">
+                                    <div class="men-cart-pro">
+                                        <div class="inner-men-cart-pro">
+                                            <a href="mens.html" class="link-product-add-cart">Quick View</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- card body -->
+                                <div class="card-body  py-3 px-2">
+                                    <h5 class="card-title text-capitalize">Single thin stripe capri</h5>
+                                    
+                                </div>
+                                <!-- card footer -->
+                              
+                            </div>
+                            <!-- //card -->
+                        </div>
+                        <div class="item col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                            <!-- card -->
+                            <div class="card product-men p-3">
+                                <div class="men-thumb-item">
+                                    <img src="assests/images/FCC002.png" alt="img" class="" style="height: 258px;width:auto;">
+                                    <div class="men-cart-pro">
+                                        <div class="inner-men-cart-pro">
+                                            <a href="mens.html" class="link-product-add-cart">Quick View</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- card body -->
+                                <div class="card-body  py-3 px-2">
+                                    <h5 class="card-title text-capitalize">Rib capri pant with thin stripe</h5>
+                                    
+                                </div>
+                              
+                            </div>
+                            <!-- //card -->
+                        </div>
+                        <!-- card -->
+                        <div class="item col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                            <div class="card product-men p-3">
+                                <div class="men-thumb-item">
+                                    <img src="assests/images/FCC003.png" alt="img" class="" style="height: 258px;width:auto;">
+                                    <div class="men-cart-pro">
+                                        <div class="inner-men-cart-pro">
+                                            <a href="mens.html" class="link-product-add-cart">Quick View</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- card body -->
+                                <div class="card-body  py-3 px-2">
+                                    <h5 class="card-title text-capitalize">Broader contrast color stripe capri  </h5>
+                                   
+                                </div>
+                                
+                        </div>
+                    </div>
+                      
+               
+                        
+                       
+                    </div>
+                </div>
+
+                <div role="tabpanel" class="tab-pane fade" id="Shorts" aria-labelledby="Shorts-tab">
+                    <div id="owl-demo2" class=" text-center row">
+                        <div class="item col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                            <!-- card -->
+                            <div class="card product-men p-3">
+                                <div class="men-thumb-item">
+                                    <img src="assests/images/FCS001.png" alt="img" class="" style="height: 258px;width:auto;">
+                                    <div class="men-cart-pro">
+                                        <div class="inner-men-cart-pro">
+                                            <a href="girl.html" class="link-product-add-cart">Quick View</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- card body -->
+                                <div class="card-body  py-3 px-2">
+                                    <h5 class="card-title text-capitalize">Boxer shorts with single thin stripe in contrast colors on both the sides</h5>
+                                    
+                                </div>
+                              
+                            </div>
+                            <!-- //card -->
+                        </div>
+                        <div class="item col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                            <!-- card -->
+                            <div class="card product-men p-3">
+                                <div class="men-thumb-item">
+                                    <img src="assests/images/FCS004 new.png" alt="img" class="" style="height: 258px;width:auto;">
+                                    <div class="men-cart-pro">
+                                        <div class="inner-men-cart-pro">
+                                            <a href="girl.html" class="link-product-add-cart">Quick View</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- card body -->
+                                <div class="card-body  py-3 px-2">
+                                    <h5 class="card-title text-capitalize">Knee length shorts with sporty side cross pattern 
+</h5>
+                                    
+                                </div>
+                              
+                            </div>
+                            <!-- //card -->
+                        </div>
+                        <div class="item col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                            <!-- card -->
+                            <div class="card product-men p-3">
+                                <div class="men-thumb-item">
+                                    <img src="assests/images/FCS0003.png" alt="img" class="" style="height: 258px;width:auto;">
+                                    <div class="men-cart-pro">
+                                        <div class="inner-men-cart-pro">
+                                            <a href="girl.html" class="link-product-add-cart">Quick View</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- card body -->
+                                <div class="card-body  py-3 px-2">
+                                    <h5 class="card-title text-capitalize">Knee length shorts with cross border in the front   </h5>
+                                    
+                                </div>
+                              
+                            </div>
+                            <!-- //card -->
+                        </div>
+                        <div class="item col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                            <!-- card -->
+                            <div class="card product-men p-3 out_w3">
+                                <div class="men-thumb-item position-relative">
+                                    <img src="assests/images/FCS002new.png" alt="img" class="" style="height: 258px;width:auto;">
+                                    
+                                </div>
+                                <!-- card body -->
+                                <div class="card-body  py-3 px-2">
+                                    <h5 class="card-title text-capitalize"> Single thin stripe boxer in contrast color on both the sides
+ </h5>
+                                   
+                                </div>
+                             
+                            </div>
+                            <!-- //card -->
+                        </div>
+                      
+                    </div>
+                </div>
+
+                <div role="tabpanel" class="tab-pane fade" id="T-Shirt" aria-labelledby="T-Shirt-tab">
+                    <div class="row text-center">
+                        <div class="item col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                            <!-- card -->
+                            <div class="card product-men p-3">
+                                <div class="men-thumb-item">
+                                    <img src="assests/images/polo copper grey side1.png" alt="img" class="" style="height: 258px;width:auto;">
+                                    <div class="men-cart-pro">
+                                        <div class="inner-men-cart-pro">
+                                            <a href="boy.html" class="link-product-add-cart">Quick View</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- card body -->
+                                <div class="card-body  py-3 px-2">
+                                    <h5 class="card-title text-capitalize">High quality pique cotton T-shirt</h5>
+                                    
+                                </div>
+                              
+                            </div>
+                           
+                        </div>
+                        <div class="item col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                            <!-- card -->
+                            <div class="card product-men p-3">
+                                <div class="men-thumb-item">
+                                    <img src="assests/images/white polo.png" alt="img"class="" style="height: 258px;width:auto;">
+                                    <div class="men-cart-pro">
+                                        <div class="inner-men-cart-pro">
+                                            <a href="boy.html" class="link-product-add-cart">Quick View</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- card body -->
+                                <div class="card-body  py-3 px-2">
+                                    <h5 class="card-title text-capitalize">High quality pique cotton T-shirt</h5>
+                                  
+                                </div>
+                                
+                            </div>
+                            <!-- //card -->
+                        </div>
+                        <div class="item col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                            <!-- card -->
+                            <div class="card product-men p-3">
+                                <div class="men-thumb-item">
+                                    <img src="assests/images/new bl.png" alt="img" style="height: 258px;width:auto;"class="" >
+                                    <div class="men-cart-pro">
+                                        <div class="inner-men-cart-pro">
+                                            <a href="boy.html" class="link-product-add-cart">Quick View</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- card body -->
+                                <div class="card-body  py-3 px-2">
+                                    <h5 class="card-title text-capitalize">High quality pique cotton T-shirt</h5>
+                                    
+                                </div>
+                               
+                            </div>
+                            <!-- //card -->
+                        </div>
+                        <div class="item col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                            <!-- card -->
+                            <div class="card product-men p-3 ">
+                            
+                                   <div class="men-thumb-item">
+                                    <img src="assests/images/polo grey front.png" alt="img"class="" style="height: 258px;width:auto;">
+                                    <div class="men-cart-pro">
+                                        <div class="inner-men-cart-pro">
+                                            <a href="boy.html" class="link-product-add-cart">Quick View</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- card body -->
+                                <div class="card-body  py-3 px-2">
+                                    <h5 class="card-title text-capitalize">High quality pique cotton T-shirt</h5>
+                                    
+                                </div>
+                               
+                            </div>
+                            <!-- //card -->
+                        </div>
+                       
+                
+                    
+                       
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>

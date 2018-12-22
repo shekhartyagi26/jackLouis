@@ -12,7 +12,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static(__dirname+'/public'));
 app.use('/api',appRoutes);
-
+app.use(express.static(path.join(__dirname, '/uploads')));
+app.use(bodyParser.urlencoded({ limit: '50mb', extended: true, parameterLimit: 1000000 }));
+app.use(bodyParser.json({ limit: '50mb', extended: true }));
 mongoose.connect('mongodb://jacklouis:jack123@ds151943.mlab.com:51943/jacklouis', function(err,db){
 	if(err){
 		console.log("not conneted to mongodb"+ err);
@@ -35,5 +37,3 @@ app.get('*', function(req,res){
 app.listen(port, function(){
 console.log('server is running on port' + port);
 });
-module.exports.variableName = "cursor";
-module.exports.variableName = "doc";

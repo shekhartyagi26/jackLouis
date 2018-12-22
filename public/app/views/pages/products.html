@@ -1,0 +1,25 @@
+  <div class="panel panel-primary" style=" display:block;
+  /*   height: 350px;
+    overflow: scroll;
+   */
+ /*   overflow-y: scroll;*/
+    table-layout: fixed;
+    border-collapse: collapse;">
+    <div class="row">
+    <div class="men-thumb-item col-md-6">
+      <img src="{{productdeta.imageUrl}}" alt="img" class="" style="height: 258px;width:auto;">
+      
+    </div>
+    <div class="col-md-6">
+    <div>
+        <label>Name:</label> {{ productdeta.productDetail.name || 'N/A' }}
+      </div>
+      <div>
+        <label>Description:</label>
+        {{ productdeta.productDetail.description || 'N/A'}}
+        <!--  <textarea name="summary" style="border-radius:0px;height:100px"></textarea> -->
+      </div>
+    </div>
+  </div>
+  </div>
+</div>

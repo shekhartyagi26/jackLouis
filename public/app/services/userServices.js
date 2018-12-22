@@ -9,7 +9,7 @@ angular.module('userServices',[])
 		 // Check if username is available at registration
 
      userFactory.getUsers = function() {
-        return $http.get('/api/management/');
+        return $http.get('/api/bloglist/');
     };
 
 

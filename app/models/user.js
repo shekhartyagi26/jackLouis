@@ -1,16 +1,11 @@
 var mongoose = require('mongoose');
-var Schema =  mongoose.Schema;
+var Schema = mongoose.Schema;
 
-var bcrypt= require('bcrypt-nodejs');
 var jacklouisSchema = new Schema({
-	
-    name: { type: String},
+    name: { type: String },
     message: { type: String },
-    email: { type: String},
-    
-    // active: { type: Boolean, required: true, default: false },
-    // temporarytoken: { type: String, required: true },
-    //   resettoken: { type: String, required: false },
+    email: { type: String }
 });
 
-module.exports= mongoose.model('jacklouis', jacklouisSchema)
+module.exports = mongoose.model('jacklouis', jacklouisSchema)
+

@@ -11,7 +11,7 @@
                         <form class="f-color"  name="blogForm" ng-submit="blog.blogUser(blogData, blogForm.$valid);" novalidate>
                             <div class="form-group" ng-class="{'has-success':(blogForm.name.$valid&&!blogForm.name.$pristine), 'has-error':(!blogForm.name.$valid&&!blogForm.name.$pristine)||(!blogForm.name.$valid&&blogForm.$submitted)}">
                                 <label for="contactname">Name</label>
-                           <input ng-disabled="blog.disabled" class="form-control" type="text" name="name" ng-model="blog.blogData.name" ng-pattern="/^(([a-zA-Z]{3,20})+[ ]+([a-zA-Z]{3,20})+)+$/" placeholder="Enter Name" ng-model="blog.blogData.name" required ng-minlength="3" ng-maxlength="20"> <p class="help-block" ng-show="(!blogForm.name.$pristine && blogForm.name.$error.required) || (blogForm.$submitted && blogForm.name.$error.required)">this Field is required</p>
+                           <input ng-disabled="blog.disabled" class="form-control" type="text" name="name" ng-model="blog.blogData.name" ng-pattern="/^(([a-zA-Z]{3,100})+[ ]+([a-zA-Z]{3,20})+)+$/" placeholder="Enter Name" ng-model="blog.blogData.name" required ng-minlength="3" ng-maxlength="100"> <p class="help-block" ng-show="(!blogForm.name.$pristine && blogForm.name.$error.required) || (blogForm.$submitted && blogForm.name.$error.required)">this Field is required</p>
         <ul class="help-block" ng-show="((!blogForm.name.$pristine && blogForm.name.$error.pattern) || (!blogForm.name.$pristine && blogForm.name.$error.minlength) || (!blogForm.name.$pristine && blogForm.name.$error.maxlength)) ">
               <li>Must have a space in between first and last firstName</li>
    <li>Must not contain any special characters</li>
@@ -35,16 +35,16 @@
                       
                             <div class="form-group" ng-class="{ 'has-success':(blogForm.message.$valid && !blogForm.message.$pristine && !blog.messageInvalid), 'has-error':(!blogForm.message.$valid && !blogForm.message.$pristine) || (!blogForm.message.$valid && blogForm.$submitted) || blog.messageInvalid }">
                                 <label for="contactcomment">Your Message</label>
-                                <textarea class="form-control" rows="5"  ng-disabled="blog.disabled" class="form-control" type="text" name="message" placeholder="Enter message" ng-model="blog.blogData.message" ng-minlength="3" ng-maxlength="25" ng-pattern="/^(?!.*?[\W])(?=.*?[a-zA-Z]|=.*?[A-Z]).{3,16}$/" ng-blur="blog.checkmessage(blogData);" required></textarea>
+                                <textarea class="form-control" rows="5"  ng-disabled="blog.disabled" class="form-control" type="text" name="message" placeholder="Enter message" ng-model="blog.blogData.message" ng-minlength="2" ng-maxlength="1000"  ng-blur="blog.checkmessage(blogData);" required></textarea>
                            <br>
 
         <p class="help-block" ng-show="(!blogForm.message.$pristine && blogForm.message.$error.required) || (blogForm.$submitted && blogForm.message.$error.required)">This field is required</p>
         <span ng-show="blog.checkingmessage && blogForm.message.$valid" class="glyphicon glyphicon-repeat"></span>
         <p class="help-block" ng-show="blog.messageMsg && !blogForm.message.$error.required && blogForm.message.$valid">{{ blog.messageMsg }}</p>
-         <ul ng-show="(!blogForm.message.$pristine && blogForm.message.$error.pattern) || (!blogForm.message.$pristine && blogForm.message.$error.minlength) || (!blogForm.message.$pristine && blogForm.message.$error.maxlength)" class="help-block">
+         <!-- <ul ng-show="(!blogForm.message.$pristine && blogForm.message.$error.pattern) || (!blogForm.message.$pristine && blogForm.message.$error.minlength) || (!blogForm.message.$pristine && blogForm.message.$error.maxlength)" class="help-block">
         <li>Must not contain any special characters or spaces</li>
         <li>Must be at least 3 characters but no more than 25</li>
-            </ul>
+            </ul> -->
         </div>
                             <button class="btn btn-primary" type="submit"  ng-disabled="blog.disabled" >Submit</button>
                         </form>
@@ -67,40 +67,66 @@
 
 
   <div class="col-lg-6 wthree-form-right">
-           
-<div class="page-header">
-  <h1>{{x.name}}'s Profile</h1>
-</div>
-<ul class="list-group">
-        <li class="list-group-item" ng-repeat="getBlogsList in blog.blogs">
-            {{getBlogsList}}
-        </li>
-<div class="=panel panel-info">
-  <div class="panel-heading" style="text-align:center"><strong>User Profile</strong></div>
-<table class="table">
-  <tr style="margin-right: 20px;">
-    <td style="margin-right: 20px;">name</td>
-    <td style="margin-right: 20px;">Email</td>
-  
-  </tr>
-    <tr>
-    <td>{{x.name}}</td>
-    <td>{{x.message}}</td>
-   
-  
 
-  </tr>
-</table>
-<div class="list-group">
-    <a *ngFor="let post of blogs" href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-        <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">{{ blogs.message}}</h5>
-            
-        </div>
-        <p class="mb-1">{{ blogs.name}}</p>
-       
-    </a>
-</div>  
+
+<div class="panel panel-primary" style=" display:block;
+     height: 350px;
+    overflow: scroll;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    table-layout: fixed;
+    border-collapse: collapse;">
+    <div class= "col-md-12" style="background-color:#EC1515;color:#fff; height: 50px; margin-top: 0px; padding-top: 0px; font-size: 22px; color: #fff;  text-align: center;">
+                         Previous  Blogs
+                      </div>
+    <!-- Heading -->
+   
+    <!-- Start: Table -->
+<!-- 
+    <div class="col" ng-repeat="person in blog.blogListUserDetails ">
+      <div class="row-md-3">{{ person.name || 'N/A' }}</div>
+      <div class="row-md-3">{{ person.message || 'N/A' }}</div>
+    </div> -->
+ <!--    <table class="table scr" style="display:block;
+     height: 350px;
+    overflow: scroll;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    table-layout: fixed;
+    border-collapse: collapse;">
+                            <tr>
+                                <th>Name</th>
+                                <th>Message</th>
+                            </tr>
+                            <tr ng-repeat="person in blog.blogListUserDetails | filter: searchFilter | limitTo: management.limit">
+                                <td>{{ person.name || 'N/A' }}</td>
+                                <td>{{ person.message  || 'N/A'}}</td>
+                                <td>
+                                
+                                    <a href="/edit/{{ person._id }}">
+                                        <button type="button" ng-show="management.editAccess" class="btn btn-primary">Edit</button>
+                                    </a> -->
+                                    <!-- Delete Button -->
+                                   <!--  <button type="button" ng-click="management.deleteUser(person.username);" ng-show="management.deleteAccess" class="btn btn-danger">Delete</button> -->
+                               <!--  </td>
+                            </tr> -->
+                            <!-- End: Table -->
+                      <!--   </table>   -->
+
+
+                        <div ng-repeat="person in blog.blogListUserDetails | filter: searchFilter | limitTo: management.limit" class= "col-md-12" style="background-color: #fff; margin-top: 3px; padding-top: 10px; box-shadow: 0px 0px 2px #888; padding-bottom: 20px;">
+                               <div>
+                                    <label>Name:</label> {{ person.name || 'N/A' }}
+                                 </div>
+                                
+
+                                  <div>
+                                     <label>Commet:</label>
+                                     {{ person.message  || 'N/A'}}
+                                     <!--  <textarea name="summary" style="border-radius:0px;height:100px"></textarea> -->
+                                  </div>
+                                  
+                        </div>
 </div>
 </div>
 </div></div>
