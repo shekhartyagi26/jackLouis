@@ -28,7 +28,12 @@ angular.module('appRoutes', ['ngRoute']).config(function ($routeProvider, $locat
         templateUrl: 'app/views/pages/track.html',
           controller: 'homeCtrl',
         controllerAs: 'home'
+    }).when('/productupload', {
+        templateUrl: 'app/views/pages/productupload.html',
+          controller: 'proupCtrl',
+        controllerAs: 'productup'
     })
+      
         .when('/products/:id', {
         templateUrl: 'app/views/pages/products.html',
         controller: 'productCtrl',

@@ -8,9 +8,9 @@ angular.module('homeControllers', []).controller('homeCtrl', function ($http) {
       
     } 
 
-    filter(){
-		//app.productList = app.productList.filter(product => product.)
-    }
+  //   filter(){
+		// //app.productList = app.productList.filter(product => product.)
+  //   }
     $http.init();
 })
 

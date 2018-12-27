@@ -19,34 +19,3 @@ this.regUser=function(regData){
 	});
 };
 })
-// .controller('detailsCtrl', function($scope,$http) {
-
-//     $scope.users = [];
-
-//     $http.get('/details').then(function(d)
-//         {
-//             console.log(d);
-//             $scope.users= d.data;
-//         },function(err)
-//         {
-//             console.log(err);            }
-//     )
-
-// })
-
-
-// (function() {
-//   'use strict';
-
-//   angular.module('navBarDemoBasicUsage', ['ngMaterial'])
-//       .controller('AppCtrl', AppCtrl);
-
-//   function AppCtrl($scope) {
-//     $scope.currentNavItem = 'page1';
-
-//     $scope.goto = function(page) {
-//       console.log("Goto " + page);
-//     }
-//   }
-// })();
-

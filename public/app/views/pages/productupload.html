@@ -1,0 +1,30 @@
+<form class="f-color" name="productForm" ng-submit="productup.productUser(productData, productForm.$valid);" novalidate>
+    <div class="form-group" ng-class="{'has-success':(productForm.name.$valid&&!productForm.name.$pristine), 'has-error':(!productForm.name.$valid&&!productForm.name.$pristine)||(!productForm.name.$valid&&productForm.$submitted)}">
+        <label for="contactusername">Name</label>
+        <input ng-disabled="productup.disabled" class="form-control" type="text" name="name" ng-model="productup.productData.name" ng-pattern="/^(([a-zA-Z]{3,20})+[ ]+([a-zA-Z]{3,20})+)+$/" placeholder="Enter Name" ng-model="productup.productData.name" required ng-minlength="3" ng-maxlength="20">
+        <p class="help-block" ng-show="(!productForm.name.$pristine && productForm.name.$error.required) || (productForm.$submitted && productForm.name.$error.required)">this Field is required</p>
+        <ul class="help-block" ng-show="((!productForm.name.$pristine && productForm.name.$error.pattern) || (!productForm.name.$pristine && productForm.name.$error.minlength) || (!productForm.name.$pristine && productForm.name.$error.maxlength)) ">
+            <li>Must have a space in between first and last firstName</li>
+            <li>Must not contain any special characters</li>
+            <li>Must not contain any numbers</li>
+            <li>Must be at least 3 characters but no more than 20</li>
+        </ul>
+    </div>
+    <div class="form-group" ng-class="{ 'has-success':(productForm.image.$valid && !productForm.image.$pristine && !productup.imageInvalid), 'has-error':(!productForm.image.$valid && !productForm.image.$pristine) || (!productForm.image.$valid && productForm.$submitted) || productup.imageInvalid }">
+        <label for="contactimage">Image</label>
+        <input ng-disabled="productup.disabled" class="form-control" name="image" type="file" multiple ng-files="getTheFiles($files)" placeholder="Enter image" ng-model="productup.productData.image">
+    </div>
+    <div class="form-group" ng-class="{ 'has-success':(productForm.description.$valid && !productForm.description.$pristine && !productup.descriptionInvalid), 'has-error':(!productForm.description.$valid && !productForm.description.$pristine) || (!productForm.description.$valid && productForm.$submitted) || productup.descriptionInvalid }">
+        <label for="contactcomment">Description</label>
+        <textarea class="form-control" rows="5" ng-disabled="productup.disabled" class="form-control" type="text" name="description" placeholder="Enter description" ng-model="productup.productData.description" ng-minlength="3" ng-maxlength="25" ng-pattern="/^(?!.*?[\W])(?=.*?[a-zA-Z]|=.*?[A-Z]).{3,16}$/" ng-blur="productup.checkdescription(productData);" required></textarea>
+        <br>
+        <p class="help-block" ng-show="(!productForm.description.$pristine && productForm.description.$error.required) || (productForm.$submitted && productForm.description.$error.required)">This field is required</p>
+        <span ng-show="productup.checkingdescription && productForm.description.$valid" class="glyphicon glyphicon-repeat"></span>
+        <p class="help-block" ng-show="productup.descriptionMsg && !productForm.description.$error.required && productForm.description.$valid">{{ productup.descriptionMsg }}</p>
+        <ul ng-show="(!productForm.description.$pristine && productForm.description.$error.pattern) || (!productForm.description.$pristine && productForm.description.$error.minlength) || (!productForm.description.$pristine && productForm.message.$error.maxlength)" class="help-block">
+            <li>Must not contain any special characters or spaces</li>
+            <li>Must be at least 3 characters but no more than 25</li>
+        </ul>
+    </div>
+    <button class="btn btn-primary" type="submit" ng-disabled="productup.disabled">Submit</button>
+</form>
