@@ -11,7 +11,7 @@ angular.module('productControllers', []).controller('productCtrl', function ($ht
         $http.get(`api/products/${id}`).then(function (data) {
             if (data && data.data && data.data.response) {
                 app.productDetail = data.data.response;
-                app.url = "http://localhost:3001/";
+                app.url = "http://18.219.225.104:3001/";
                 app.imageUrl = `${app.url}${app.productDetail.image[0].image_url}`;
             } else {
                 window.location = '/';
