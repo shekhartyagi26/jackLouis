@@ -11,7 +11,7 @@ angular.module('appRoutes', ['ngRoute']).config(function ($routeProvider, $locat
         controller: 'regCtrl',
         controllerAs: 'register'
     }).when('/men', {
-        templateUrl: 'app/views/pages/men.html',
+        templateUrl: 'app/views/pages/mens.html',
          controller: 'homeCtrl',
         controllerAs: 'home'
     }).when('/top', {
